@@ -44,6 +44,8 @@ form button:hover{
 }
 
 .todo-container{
+    position: relative;
+    top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +54,7 @@ form button:hover{
 
 .todo-list{
     position: absolute;
-    min-width: 25%;
+    min-width: 35%;
     list-style: none;
 }
 
@@ -64,6 +66,8 @@ form button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
+
 }
 
 .todo li {
@@ -77,4 +81,71 @@ form button:hover{
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
+}
+
+.complete-btn{
+    background: rgb(73, 204, 73);
+}
+
+
+/* .trash-btn{
+    background-color: rgb(236, 16, 16);
+} */
+
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+  transform: translateY(8rem) rotatez(20deg);
+  opacity: 0;  
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: #3ea6ff;
+    width: 10rem;
+    cursor: pointer;
+    border-radius: 5%;
+    padding: 1rem;
+}
+
+.select::after{
+    content: "\25bc";
+    position: absolute;
+    background:#3ea6ff ;
+    color: white;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition:all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #3ea6ff;
 }
